@@ -1,24 +1,29 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-  </div>
+  <div class="p-d-inline p-d-flex p-jc-between">
+    <div id="app">
+      <menu-lateral/>
+    </div>
+  </div>  
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+
+import Sidebar from './components/shared/sidebar/Sidebar.vue';
 
 export default {
   name: 'App',
-  components: {
-    HelloWorld
+  components:{
+    "menu-lateral" : Sidebar,
   }
+
 }
 </script>
 
 <style>
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
+  font-family: Avenir, 'Poppins', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
