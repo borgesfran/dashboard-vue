@@ -1,6 +1,6 @@
 <template>
     <div>
-        <menu-lateral :model="items"/>
+        <menu-lateral :model="items"></menu-lateral>
     </div>
 </template>
 
@@ -18,9 +18,12 @@
                 ]
             }
         }
-    }
+    };
 </script>
 
 <style scoped>
+.p-menu{
+  width: 10rem !important;
+}
 
 </style>

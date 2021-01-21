@@ -1,7 +1,7 @@
 <template>
     <div>
-        <p-sidebar :visible.sync="visibleLeft" class="p-sidebar-sm" :modal=false :ariaCloseLabel="pi-angle-double-left">
-            <p-menu :class="p-mb-5"/>
+        <p-sidebar  :visible.sync="visibleLeft" class="p-sidebar-sm" :modal=false :ariaCloseLabel="pi-angle-double-left">
+            <p-menu />
         </p-sidebar>
         <botao-mostrar icon="pi pi-bars" class="p-button-text titulo-menu "  @click="visibleLeft = true" v-show="!visibleLeft"/>
     </div>
@@ -21,8 +21,8 @@
         data(){
             return{
                 visibleLeft: false,
-            }
-        }
+            };
+        },
         
     }
 </script>
@@ -31,6 +31,5 @@
 .p-sidebar{
     width: 20%;
 }
-
 
 </style>
