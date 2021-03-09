@@ -2,12 +2,14 @@
     <div>
         <p-sidebar  :visible.sync="visibleLeft" class="p-sidebar-sm" :modal=false :ariaCloseLabel="pi-angle-double-left">
            <div>
-               <img id="img-logo" src="../../../assets/imagens/shield.jpg" height="150" width="200" class="p-ml-4" />           
-               <h3 id="titulo">ESTOQUE</h3>
+               <div id="avatar-logo">
+                    <img id="img-logo" src="../../../assets/imagens/logo-shield.png" />           
+               </div>
+                <h3 id="titulo">ESTOQUE</h3>
            </div>
            <menu-lateral :class="p-mb-5"/>
         </p-sidebar>
-        <botao icon="pi pi-bars"  @click="visibleLeft = true" class="p-mr-2" v-show="!visibleLeft"/>
+        <botao id="botao-menu"  @click="visibleLeft = true" v-show="!visibleLeft"/>
     </div>
 </template>
 
@@ -37,20 +39,38 @@
     margin-top:12rem;
 }
 
+#botao-menu{
+    background: url(../../../assets/imagens/logo-shield.png);
+    background-size: 58px ;
+    height: 50px;  
+    width: 30px;
+}
+
+#avatar-logo{
+    background-color: black;
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    overflow: hidden;
+    position: relative;
+    margin-top:1rem;
+    margin-left:3.5rem;
+}
+
 #img-logo{
-    width: 60%;
-    height: 60%;
-    border-width: 3px;
-    border-color: black;
-    display: inline-block;
-    border-radius: 90px;
-    margin: 10% 10% 0 0;
+    height: 100%;
+    width: 120%;
+    margin-left: -1rem;
 }
 
 #titulo{
     font-family: 'Poppins';
     font-size: 1.5rem;
+    margin-left: 5rem;
 }
 
+.p-button{
+    background-color: black;
+}
 
 </style>

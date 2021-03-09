@@ -1,6 +1,10 @@
 <template>
     <div>
-        <menu-lateral :model="items"></menu-lateral>
+        <menu-lateral :model="items">
+            <template #start>
+                <img alt="logo" src="../../../assets/imagens/shield.jpg" height="40" class="p-mr-2">
+            </template>
+        </menu-lateral>
     </div>
 </template>
 
@@ -34,10 +38,17 @@
 .p-submenu-list {
   float: right !important;
   margin-left: auto;
+  
 }
 .subitem {
   font-size: 50% !important;
+  color: #3F51B5;
 }
+
+li:hover{
+    background-color: #3F51B5 !important;
+}
+
 
 .p-menu{
   width: 100% !important;

@@ -1,19 +1,18 @@
 <template>
- 
   <div id="app">
-    <div class="p-d-inline p-d-flex p-jc-between">
-      <menu-lateral/>
-    </div>
+    <topo/>
+    <home/>
   </div>  
 </template>
 
 <script>
 
-import Sidebar from './components/shared/sidebar/Sidebar.vue';
-
+import Topo from './components/shared/toolbar/Topo.vue';
+import Home from './components/home/Home.vue';
 export default {
   components:{
-    "menu-lateral" : Sidebar,
+    "topo" : Topo,
+    "home": Home,
   },
 
 }
@@ -25,10 +24,9 @@ export default {
 
 #app {
   font-family: 'Poppins', sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+  position: fixed;
+  width: 100%;
+  margin-top: -0.8em;
+  margin-left: -0.5em;
 }
 </style>
